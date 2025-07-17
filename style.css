@@ -1,0 +1,161 @@
+:root {
+  --main-bg: #121212;
+  --highlight: #e50914;
+  --text-light: #ffffff;
+  --font-main: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--main-bg);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #1c1c1c;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: var(--highlight);
+}
+
+.nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--highlight);
+}
+
+.hero {
+  background-image: url("https://i.pinimg.com/736x/5f/34/ee/5f34ee7e4e66fad37d99433b26f7c664.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-content:hover {
+  transform: scale(1.02);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--highlight);
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #ff1e25;
+  transform: translateY(-2px);
+}
+
+.now-showing {
+  padding: 2rem;
+  text-align: center;
+}
+
+.movie-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.movie-card {
+  background: #1f1f1f;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.location {
+  padding: 2rem;
+  text-align: center;
+  background: #1a1a1a;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .movie-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-card {
+    width: 90%;
+  }
+}
