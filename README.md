@@ -1,1 +1,1 @@
-# cinemestar-landing-page
+# cinemastar-landing-page
